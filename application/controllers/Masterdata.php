@@ -26,10 +26,130 @@ class Masterdata extends Auth_Controller
         $this->load->view($roler, $session_data);
 
      //Let's load the body
-     $hasil['hasil'] = $this->user->getUserList();
+     $hasil['hasil'] = $this->masterdatax->getAssetList();
         $this->load->view('master_asset', $hasil);
     }
+public function asset_add()
+    {
 
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+        $data['role'] = $this->masterdatax;//->getRole();
+        $this->load->library('form_validation');
+        $this->load->view('master_assest_add', $data);
+    }
+
+    public function asset_insert()
+    {
+        $this->load->helper(array('form', 'url'));
+                //load validation library
+                $this->load->library('form_validation');
+
+                //set validation rules
+                $this->form_validation->set_rules(
+                        'username', 'Username',
+                        'required|min_length[3]|max_length[12]|is_unique[users.username]',
+                        array(
+                                'required' => 'You have not provided %s.',
+                                'is_unique' => 'This %s already exists.',
+                        )
+                );
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[password]');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
+
+        if ($this->form_validation->run() == false) {
+            //Pretty much standard...
+             $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+            $roler = getMenu($session_data['role']);
+            $this->load->view('header', $data);
+            $this->load->view('topbar', $session_data);
+            $this->load->view($roler, $session_data);
+
+            $this->load->view('master_asset_add');
+        } else {
+            echo 'asjib';
+        }
+    }
+    function asset_detail($slug = NULL)
+    {
+              //Pretty much standard...
+         $session_data = $this->session->userdata('logged_in');
+         $data['username'] = $session_data['username'];
+         $roler = getMenu($session_data['role']);
+         $this->load->view('header', $data);
+         $this->load->view('topbar',$session_data);
+         $this->load->view($roler,$session_data);  
+
+         //Let's load the body
+         $hasilx=$this->masterdatax->getAssetDetail($slug);
+         if ($hasilx) {
+            foreach($hasilx as $row)
+                 {
+                   $hasil = array(
+                     'id' => $row->id,
+                     'fullname' => $row->fullName,
+                     'username' => $row->userName,
+                     'password' => $row->userPassword,
+                     'email' => $row->userEmail,
+                     'role' => $row->userRole,
+                     'avatar' => $row->userAvatar                   
+                   );
+                     }
+    }
+    $this->load->view('master_asset_detail',$hasil);
+    }
+
+    function edit_asset($slug = NULL)
+    {
+              //Pretty much standard...
+         $session_data = $this->session->userdata('logged_in');
+         $data['username'] = $session_data['username'];
+         $roler = getMenu($session_data['role']);
+         $this->load->view('header', $data);
+         $this->load->view('topbar',$session_data);
+         $this->load->view($roler,$session_data);  
+         
+         //Let's load the body
+         $hasilx=$this->masterdatax->getAssetDetail($slug);
+         if ($hasilx) {
+            foreach($hasilx as $row)
+                 {
+                   $hasil = array(
+                     'id' => $row->id,
+                     'fullname' => $row->fullName,
+                     'username' => $row->userName,
+                     'password' => $row->userPassword,
+                     'email' => $row->userEmail,
+                     'role' => $row->userRole,
+                     'avatar' => $row->userAvatar
+                   );
+                     }
+    }
+    $this->load->view('master_asset_edit',$hasil);
+    }
+
+    function update_asset() 
+    {
+        $id=$_POST['id'];
+        $data = array(
+        'fullName' => $_POST['fullname'],
+        'userName' => $_POST['username'],
+        'userPassword' => $_POST['password'],
+        'userEmail' => $_POST['email']
+        );
+        //var_dump($data);
+        $this->masterdatax->updateAsset($id,$data);
+        redirect('masterdata/user','refresh');
+}    
 
     public function user()
     {
@@ -43,7 +163,7 @@ class Masterdata extends Auth_Controller
         $this->load->view($roler, $session_data);
 
      //Let's load the body
-     $hasil['hasil'] = $this->user->getUserList();
+     $hasil['hasil'] = $this->masterdatax->getAssetList();
         $this->load->view('master_user', $hasil);
     }
      public function user_add()
