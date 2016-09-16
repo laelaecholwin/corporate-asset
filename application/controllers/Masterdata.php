@@ -46,6 +46,66 @@ class Masterdata extends Auth_Controller
      $hasil['hasil'] = $this->user->getUserList();
         $this->load->view('master_user', $hasil);
     }
+    public function brand()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+     $hasil['hasil'] = $this->user->getUserList();
+        $this->load->view('master_brand', $hasil);
+    }
+    public function business_unit()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+     $hasil['hasil'] = $this->user->getUserList();
+        $this->load->view('master_business_unit', $hasil);
+    }
+    public function category()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+     $hasil['hasil'] = $this->user->getUserList();
+        $this->load->view('master_category', $hasil);
+    }
+    public function type()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+     $hasil['hasil'] = $this->user->getUserList();
+        $this->load->view('master_type', $hasil);
+    }
 
     public function user_add()
     {
@@ -96,6 +156,70 @@ class Masterdata extends Auth_Controller
         } else {
             echo 'asjib';
         }
+    }
+    public function brand_add()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+        $data['role'] = $this->masterdatax;//->getRole();
+        $this->load->library('form_validation');
+        $this->load->view('master_brand_add', $data);
+    }
+    public function business_unit_add()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+        $data['role'] = $this->masterdatax;//->getRole();
+        $this->load->library('form_validation');
+        $this->load->view('master_business_unit_add', $data);
+    }
+     public function category_add()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+        $data['role'] = $this->masterdatax;//->getRole();
+        $this->load->library('form_validation');
+        $this->load->view('master_category_add', $data);
+    }
+     public function type_add()
+    {
+
+     //Pretty much standard...
+     $session_data = $this->session->userdata('logged_in');
+        $data['username'] = $session_data['username'];
+        $roler = getMenu($session_data['role']);
+        $this->load->view('header', $data);
+        $this->load->view('topbar', $session_data);
+        $this->load->view($roler, $session_data);
+
+     //Let's load the body
+        $data['role'] = $this->masterdatax;//->getRole();
+        $this->load->library('form_validation');
+        $this->load->view('master_type_add', $data);
     }
 
 
