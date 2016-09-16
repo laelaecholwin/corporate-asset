@@ -1,6 +1,75 @@
 <?php
 Class Masterdatax extends CI_Model
 {
+  /****start inventory***/
+
+function getBrandList()
+ {
+    $query = $this->db->get('brand');
+     return $query->result();
+ }
+
+ function getBusinessunitList()
+ {
+    $query = $this->db->get('business_unit');
+     return $query->result();
+ }
+
+ function getCategoryList()
+ {
+    $query = $this->db->get('category');
+     return $query->result();
+ }
+
+ function getTypeList()
+ {
+    $query = $this->db->get('type');
+     return $query->result();
+ }
+
+}
+
+function getBrandDetail($id)
+ {
+    $this -> db -> where('id',$id);
+    $query = $this -> db -> get('master_brand');
+   if ($query) {
+       return $query->result();
+   }
+
+  }
+
+  function getBusinessunitDetail($id)
+ {
+    $this -> db -> where('id',$id);
+    $query = $this -> db -> get('master_business_unit');
+   if ($query) {
+       return $query->result();
+   }
+
+  }
+
+  function getCategoryDetail($id)
+ {
+    $this -> db -> where('id',$id);
+    $query = $this -> db -> get('master_category');
+   if ($query) {
+       return $query->result();
+   }
+
+  }
+
+   function getTypeDetail($id)
+ {
+    $this -> db -> where('id',$id);
+    $query = $this -> db -> get('master_type');
+   if ($query) {
+       return $query->result();
+   }
+
+
+
+  /***end inventory***/
 
  function getState()
  {
@@ -351,8 +420,9 @@ ON bee_drivers.branchId=bee_branch.id";
     $query = $this->db->get('bee_agent');
      return $query->result();
  }
-
-}
+//...........New...............
+ 
+  }
 
 
 ?>
