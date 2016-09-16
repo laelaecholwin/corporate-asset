@@ -32,54 +32,49 @@
                                     
                                         <form class="form-horizontal" role="form" method="post" action="<?php echo base_url(); ?>masterdata/user_insert">
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Username</label>
+                                                <label class="col-md-2 control-label">User ID</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="username" placeholder="Enter Username">
+                                                    <input type="text" class="form-control" name="id" placeholder="Enter Username">
                                                 </div>
                                             </div> 
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Password</label>
+                                                <label class="col-md-2 control-label">Full Name</label>
                                                 <div class="col-md-10">
-                                                    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                                                    <input type="password" class="form-control" name="fullname" placeholder="Enter Password">
                                                 </div>
                                             </div>                                               
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Re - Password</label>
+                                                <label class="col-md-2 control-label">User Name</label>
                                                 <div class="col-md-10">
-                                                    <input type="password" class="form-control" name="passconf" placeholder="Re - Enter Password">
+                                                    <input type="password" class="form-control" name="name" placeholder="Re - Enter Password">
                                                 </div>
                                             </div>                                                
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Address</label>
+                                                <label class="col-md-2 control-label">Password</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="addr" placeholder="Enter Address">
+                                                    <input type="text" class="form-control" name="password" placeholder="Enter Address">
                                                 </div>
                                             </div>                                                               
                                                                                            
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Full Name</label>
+                                                <label class="col-md-2 control-label">Email</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="fullname" placeholder="Enter Full Name">
+                                                    <input type="text" class="form-control" name="email" placeholder="Enter Full Name">
                                                 </div>
                                             </div>                                            
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Location</label>
+                                                <label class="col-md-2 control-label">Role</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="location" placeholder="Select Location">
+                                                    <input type="text" class="form-control" name="role" placeholder="Select Location">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Email</label>
+                                                <label class="col-md-2 control-label">Avatar</label>
                                                 <div class="col-md-10">
-                                                    <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                                                    <input type="email" class="form-control" name="avator" placeholder="Enter Email">
                                                 </div>
                                             </div>    
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Phone Number</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="phone" placeholder="Enter Phone Number">
-                                                </div>
-                                            </div> 
+                                          
                                                                                                                                                                                                                                                                                                                 
                                             <div class="form-group">
                                             <label class="col-md-2 control-label"></label>
