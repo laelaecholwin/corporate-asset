@@ -16,7 +16,7 @@
                                 <h4 class="pull-left page-title">Master Assets</h4>
                                 <ol class="breadcrumb pull-right">
                                     <li><a href="#"><?php echo MY_CONSTANT; ?></a></li>
-                                    <li><a href="<?php echo base_url(); ?>masterdata/branch">Master Assets</a></li>
+                                    <li><a href="<?php echo base_url(); ?>masterdata/asset">Master Assets</a></li>
                                     <li class="active">Add Assets</li>
                                 </ol>
                             </div>
