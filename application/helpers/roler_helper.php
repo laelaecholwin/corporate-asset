@@ -8,7 +8,7 @@ if(!function_exists('getMenu'))
     case "Agent":
         return "sidebar_agent";
         break;
-    case "Super Admin":
+    case "Admin":
         return "sidebar_admin";
         break;
     case "Branch Admin":

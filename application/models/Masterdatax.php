@@ -49,7 +49,7 @@ function getCargate()
    return $query->result();
 }
 
-
+/*
  function getRole()
  {
     $this->db->select('name');
@@ -64,7 +64,7 @@ function getCargate()
      return false;
    }
  }
-
+*/
 
 function setPriceBatchc2c($cityfrom,$cityto,$price)
 {

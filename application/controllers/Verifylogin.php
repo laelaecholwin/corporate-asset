@@ -48,10 +48,10 @@ class VerifyLogin extends CI_Controller
       'fullname' => $row->fullName,
       'role' => $row->role,
       'avatar' => $row->avatar,
-      'entityId' => $row->entityId,
+     
        );
 
-                $entityid = $row->entityId;
+                //$entityid = $row->entityId;
                 //check if agent then add entitytype and typeid
 
                 $this->session->set_userdata('logged_in', $sess_array);

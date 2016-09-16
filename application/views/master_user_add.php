@@ -55,25 +55,7 @@
                                                     <input type="text" class="form-control" name="addr" placeholder="Enter Address">
                                                 </div>
                                             </div>                                                               
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Role</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control rolex" name="role" required>
-                                                    <option></option>
-                                                    <?php foreach ($role as $r) {
-                                                        echo '<option>'.$r->name.'</option>';
-                                                    }
-                                                    ?>
-                                                    </select>
-                                                </div>
-                                            </div> 
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Select Entity</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control entity" name="entity" required>
-                                                    </select>
-                                                </div>
-                                            </div>                                                      
+                                                                                           
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Full Name</label>
                                                 <div class="col-md-10">
@@ -98,12 +80,7 @@
                                                     <input type="text" class="form-control" name="phone" placeholder="Enter Phone Number">
                                                 </div>
                                             </div> 
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Entity ID</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="entityid" placeholder="Enter Entity ID">
-                                                </div>
-                                            </div>                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                
                                             <div class="form-group">
                                             <label class="col-md-2 control-label"></label>
                                                 <div class="col-md-2">

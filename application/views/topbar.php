@@ -9,7 +9,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="<?php echo base_url(); ?>index.php" class="logo"><i class="fa fa-forumbee"></i> <span> <?php echo MY_CONSTANT; ?> </span></a>
+                        <a href="<?php echo base_url(); ?>index.php" class="logo"><i class="ion-home"></i> <span> <?php echo MY_CONSTANT; ?> </span></a>
                     </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->

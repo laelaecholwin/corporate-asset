@@ -36,7 +36,7 @@
                                                             <th>Username</th>
                                                             <th>Role</th>
                                                             <th>Full Name</th>
-                                                            <th>Entity ID</th>
+                                                          
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -44,7 +44,7 @@
                                              
                                                     <tbody>
                                                     <?php foreach ($hasil as $h) {
-                                                        echo '<tr><td>'.$h->id.'</td><td><img src="'.base_url().$h->avatar.'" alt="user-img" class="img-circle smallpic"></td><td>'.$h->username.'</td><td>'.$h->role.'</td><td>'.$h->fullName.'</td><td>'.$h->id.'</td> <td><form action="#"><button type="submit" class="btn btn-inverse waves-effect waves-light m-b-5"> <i class="fa fa-edit"></i> <span> Edit</span></button></form></td></tr>';
+                                                        echo '<tr><td>'.$h->id.'</td><td><img src="'.base_url().$h->avatar.'" alt="user-img" class="img-circle smallpic"></td><td>'.$h->username.'</td><td>'.$h->role.'</td><td>'.$h->fullName.'</td>'.'<td><form action="#"><button type="submit" class="btn btn-inverse waves-effect waves-light m-b-5"> <i class="fa fa-edit"></i> <span> Edit</span></button></form></td></tr>';
                                                     }
 
                                                        ?>

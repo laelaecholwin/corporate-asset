@@ -23,7 +23,7 @@ class Home extends Auth_Controller
         $this->load->view($roler, $session_data);
 
      //load body
-    $data['instock']=$this->journeyx->get_instock($session_data['entityId']);
+    $data['instock']=$this->journeyx ;//->get_instock($session_data['logged_in']);
     $this->load->view('home_view',$data);
     }
 

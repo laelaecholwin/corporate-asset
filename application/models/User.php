@@ -3,7 +3,7 @@ Class User extends CI_Model
 {
  function login($username, $password)
  {
-   $this -> db -> select('id, username, password,fullName,role,avatar,entityId');
+   $this -> db -> select('id, username, password,fullName,role,avatar');
    $this -> db -> from('users');
    $this -> db -> where('username', $username);
    $this -> db -> where('password', $password);
@@ -61,7 +61,7 @@ Class User extends CI_Model
 
  function getUserList()
  {
-   $this -> db -> where('role !=', 'Super Admin');
+   $this -> db -> where('role !=', 'Admin');
    $query = $this -> db -> get('users');
    if ($query) {
        return $query->result();

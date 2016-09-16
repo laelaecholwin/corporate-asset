@@ -6,7 +6,7 @@
                 <div class="sidebar-inner slimscrollleft">
                     <div class="user-details">
                         <div class="pull-left">
-                            <img src="<?php echo $avatar;?>" alt="" class="thumb-md img-circle">
+                            <img src="<?php //echo $avatar;?>" alt="" class="thumb-md img-circle">
                         </div>
                         <div class="user-info">
                             <div class="dropdown">

@@ -59,7 +59,7 @@ class Masterdata extends Auth_Controller
         $this->load->view($roler, $session_data);
 
      //Let's load the body
-     $data['role'] = $this->masterdatax->getRole();
+        $data['role'] = $this->masterdatax;//->getRole();
         $this->load->library('form_validation');
         $this->load->view('master_user_add', $data);
     }
