@@ -32,6 +32,12 @@
                             <li>
                                 <a href="<?php echo base_url(); ?>masterdata/asset" class="waves-effect <?php if ($this->uri->segment(2)=='asset') {echo "active";} ?>"><i class="md md-domain"></i><span> Manage Asset</span></a>
                             </li>
+                             <li>
+                                <a href="<?php echo base_url(); ?>masterdata/brand" class="waves-effect <?php if ($this->uri->segment(2)=='branch') {echo "active";} ?>"><i class="md md-location-city"></i><span> Manage Brand </span></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>masterdata/business_unit" class="waves-effect <?php if ($this->uri->segment(2)=='branch') {echo "active";} ?>"><i class="md md-location-city"></i><span> Manage Business Unit </span></a>
+                            </li>
                             <li>
                                 <a href="<?php echo base_url(); ?>masterdata/category" class="waves-effect <?php if ($this->uri->segment(2)=='branch') {echo "active";} ?>"><i class="md md-location-city"></i><span> Manage Category </span></a>
                             </li>
