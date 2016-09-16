@@ -3,6 +3,11 @@ Class Masterdatax extends CI_Model
 {
   /****start inventory***/
 
+function getAssetList()
+ {
+    $query = $this->db->get('assets');
+     return $query->result();
+ }
 function getBrandList()
  {
     $query = $this->db->get('brand');
@@ -28,6 +33,15 @@ function getBrandList()
  }
 
 }
+function getAssetDetail($id)
+ {
+    $this -> db -> where('id',$id);
+    $query = $this -> db -> get('master_asset');
+   if ($query) {
+       return $query->result();
+   }
+
+  }
 
 function getBrandDetail($id)
  {
