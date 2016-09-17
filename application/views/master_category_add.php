@@ -29,15 +29,15 @@
                                     <div class="panel-body">
                                         <form class="form-horizontal" role="form" action="<?php echo base_url(); ?>masterdata/insert_branch" method="post">
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Category Name</label>
+                                                <label class="col-md-2 control-label">Category ID</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="name" placeholder="Enter Branch Name" required>
+                                                    <input type="text" class="form-control" name="id" placeholder="Enter Branch Name" required>
                                                 </div>
                                             </div> 
                                              <div class="form-group">
-                                                <label class="col-sm-2 control-label">Category Type</label>
+                                                <label class="col-sm-2 control-label">Category Name</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="type">
+                                                    <select class="form-control" name="name">
                                                                 <?php 
                                                                     foreach($result  as $r): 
                                                                        echo '<option value="'.$r->PlaceID.'">('.$r->PlaceID.') '.$r->StateDiv.' - '.$r->Township.'</option>';
@@ -46,66 +46,9 @@
                                                     </select>
                                                 </div>
                                             </div> 
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Category</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control" name="brand">
-                                                                <?php 
-                                                                    foreach($result  as $r): 
-                                                                       echo '<option value="'.$r->PlaceID.'">('.$r->PlaceID.') '.$r->StateDiv.' - '.$r->Township.'</option>';
-                                                                    endforeach;
-                                                                    ?>
-                                                    </select>
-                                                </div>
-                                            </div> 
-                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label">Category</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control" name="category">
-                                                                <?php  
-                                                                    foreach($result  as $r): 
-                                                                       echo '<option value="'.$r->PlaceID.'">('.$r->PlaceID.') '.$r->StateDiv.' - '.$r->Township.'</option>';
-                                                                    endforeach;
-                                                                    ?>
-                                                    </select>
-                                                </div>
-                                            </div>    
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Business Unit</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control" name="bu">
-                                                                <?php 
-                                                                    foreach($result  as $r): 
-                                                                       echo '<option value="'.$r->PlaceID.'">('.$r->PlaceID.') '.$r->StateDiv.' - '.$r->Township.'</option>';
-                                                                    endforeach;
-                                                                    ?>
-                                                    </select>
-                                                </div>
-                                            </div>  
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Location</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control" name="code">
-                                                                <?php 
-                                                                    foreach($result  as $r): 
-                                                                       echo '<option value="'.$r->PlaceID.'">('.$r->PlaceID.') '.$r->StateDiv.' - '.$r->Township.'</option>';
-                                                                    endforeach;
-                                                                    ?>
-                                                    </select>
-                                                </div>
-                                            </div>                                                                                           
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Responsible Person</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="responsibleperson" placeholder="Enter Branch PIC">
-                                                </div>
-                                            </div>                                                
-                                            <div class="form-group">
-                                                <label class="col-md-2 control-label">Assigned To</label>
-                                                <div class="col-md-10">
-                                                    <input type="text" class="form-control" name="assignedto" placeholder="Enter Phone Number">
-                                                </div>
-                                            </div> 
+                                          
+                                         
+                                            
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Description</label>
                                                 <div class="col-md-10">

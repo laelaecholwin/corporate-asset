@@ -32,12 +32,13 @@
                                                     <thead>
                                                         <tr>
                                                             <th>ID</th>
-                                                            <th>Avatar</th>
-                                                            <th>Username</th>
-                                                            <th>Role</th>
                                                             <th>Full Name</th>
-                                                          
-                                                            <th>Action</th>
+                                                            <th>Username</th>
+                                                            <th>Password</th>
+                                                            <th>Email</th>
+                                                         
+                                                            <th>Role</th>
+                                                            <th>Avatar</th> 
                                                         </tr>
                                                     </thead>
 
